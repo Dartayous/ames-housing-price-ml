@@ -40,3 +40,11 @@ Below is a SHAP waterfall plot showing how the Ridge Regression model made its p
 ![SHAP Waterfall Plot](images/waterfall_house16.png)
 
 This visual highlights the base value, the positive and negative feature contributions, and the final log-price prediction—illustrating interpretability at the individual prediction level.
+
+## Global Model Explainability (SHAP Summary Plot)
+
+Below is a SHAP bar-style summary plot showing the **average impact of each feature on model predictions** across the test set:
+
+![SHAP Bar Style Summary Plot](images/shap_summary_bar.png)
+
+This visual summarizes which features most heavily influence the Ridge Regression model’s output, averaged over many predictions. High-impact features (positive or negative) reflect consistent influence, not just isolated cases.
