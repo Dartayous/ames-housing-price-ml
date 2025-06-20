@@ -32,3 +32,11 @@ You can auto-generate it like this:
 
 ```python
 !pip freeze > requirements.txt
+
+## Model Explainability (SHAP)
+
+Below is a SHAP waterfall plot showing how the Ridge Regression model made its prediction for a specific home (Index #16):
+
+![SHAP Waterfall Plot](images/waterfall_house16.png)
+
+This visual highlights the base value, the positive and negative feature contributions, and the final log-price prediction—illustrating interpretability at the individual prediction level.
