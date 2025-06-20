@@ -1,4 +1,6 @@
-# Ames Housing Price Prediction 
+# Ames Housing Price Prediction
+
+![Explainable AI](https://img.shields.io/badge/Explainability-SHAP-%234CAF50?style=for-the-badge&logo=datadog)
 
 A machine learning project using Ridge Regression to predict housing prices based on simplified housing features.
 
