@@ -35,6 +35,7 @@ You can auto-generate it like this:
 ```python
 !pip freeze > requirements.txt
 
+
 ## Model Explainability (SHAP)
 
 Below is a SHAP waterfall plot showing how the Ridge Regression model made its prediction for a specific home (Index #16):
@@ -43,6 +44,7 @@ Below is a SHAP waterfall plot showing how the Ridge Regression model made its p
 
 This visual highlights the base value, the positive and negative feature contributions, and the final log-price prediction—illustrating interpretability at the individual prediction level.
 
+                                                                                                               
 ## Global Model Explainability (SHAP Summary Plot)
 
 Below is a SHAP bar-style summary plot showing the **average impact of each feature on model predictions** across the test set:
@@ -50,3 +52,18 @@ Below is a SHAP bar-style summary plot showing the **average impact of each feat
 ![SHAP Bar Style Summary Plot](images/shap_summary_bar.png)
 
 This visual summarizes which features most heavily influence the Ridge Regression model’s output, averaged over many predictions. High-impact features (positive or negative) reflect consistent influence, not just isolated cases.
+
+                                                                                                               
+### SHAP Plot Warning Fix: Explicit Random Number Generator
+
+During the SHAP summary plot visualization, a `FutureWarning` was triggered:
+
+> The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly...
+
+This warning is related to upcoming changes in NumPy's handling of randomness. To future-proof the visualization and silence the warning, I passed an explicit random number generator (`rng`) to the `shap.summary_plot` call:
+
+```python
+import numpy as np
+
+rng = np.random.default_rng(seed=42)
+shap.summary_plot(shap_values, X_test_float, plot_type="bar", rng=rng)
