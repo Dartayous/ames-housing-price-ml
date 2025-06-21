@@ -1,3 +1,11 @@
+![RMSE-Ridge](https://img.shields.io/badge/RMSE%20(Ridge)-~0.252-success)
+![RMSE-XGBoost](https://img.shields.io/badge/RMSE%20(XGBoost)-0.2755-blue)
+![RMSE-RF](https://img.shields.io/badge/RMSE%20(Random%20Forest)-0.2516-purple)
+![RMSE-Lasso](https://img.shields.io/badge/RMSE%20(Lasso)-0.3635-lightgrey)
+![Modeling-Done](https://img.shields.io/badge/Modeling-Complete-brightgreen)
+![SHAP-Integrated](https://img.shields.io/badge/SHAP-Visualized-important)
+
+
 # Ames Housing Price Prediction
 
 ![Explainable AI](https://img.shields.io/badge/Explainability-SHAP-%234CAF50?style=for-the-badge&logo=datadog)
