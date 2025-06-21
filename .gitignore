@@ -1,0 +1,21 @@
+# Jupyter and Python junk
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# Virtual environment folders
+env/
+venv/
+.venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment settings
+.env
+
+.ipynb_checkpoints/
+
+# Ignore saved models
+models/*.pkl
